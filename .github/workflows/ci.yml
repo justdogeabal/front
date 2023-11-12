@@ -20,11 +20,10 @@ jobs:
       - name: Install AWS CLI
         run: sudo apt install awscli -y
 
-      - name : dist로 이동
-        run: cd dist  
-
       - name: 빌드한 파일 S3에 업로드
-        run: aws s3 sync . s3://my-whitedog 
+        run: |
+          cd dist
+          aws s3 sync . s3://my-whitedog 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
