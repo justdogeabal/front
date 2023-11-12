@@ -1,0 +1,30 @@
+name: cicd
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install and build
+        run: |
+          yarn install
+          yarn build
+
+      - name: Install AWS CLI
+        run: sudo apt install awscli -y
+
+      - name: s3 sync
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 sync \
+             --region ap-northeast-2 \
+             dist s3://my-whitedog \
