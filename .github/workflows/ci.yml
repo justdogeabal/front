@@ -17,12 +17,6 @@ jobs:
           yarn install
           yarn build
 
-      - name: AWS CLI 설정
-        run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip awscliv2.zip
-          sudo ./aws/install
-
 
       - name: 빌드한 파일 S3에 업로드
         run: aws s3 sync build/ s3://my-whitedog --acl public-read
