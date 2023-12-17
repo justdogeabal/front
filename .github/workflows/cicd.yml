@@ -17,8 +17,8 @@ jobs:
           yarn install
           yarn build
 
-      - name: Install AWS CLI
-        run: sudo apt install awscli -y
+      # - name: Install AWS CLI
+      #   run: sudo apt install awscli -y
 
       - name: s3 sync
         env:
