@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import {
+  HeaderBottomBorder,
   HeaderContainer,
   HeaderLink,
   HeaderWrapper,
@@ -30,6 +31,7 @@ const Header = () => {
           <Button>Join</Button>
         </HeaderWrapper>
       </HeaderContainer>
+      <HeaderBottomBorder />
       <div className="relative">
         <img
           alt="광고"
