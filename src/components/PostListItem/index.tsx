@@ -1,7 +1,9 @@
 import { PostListContainer, PostListRanking, PostListWrapper } from './styles';
 import '../../App.css';
+import { loadBestSellerListFromA } from '../../api/bestsellers';
 
 const PostListItem = () => {
+  loadBestSellerListFromA();
   return (
     <PostListContainer>
       <PostListWrapper>
