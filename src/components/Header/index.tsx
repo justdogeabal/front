@@ -7,6 +7,7 @@ import {
   Logo,
   MenuWrapper,
   SearchBar,
+  SearchBarWrapper,
 } from './styles';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -23,10 +24,10 @@ const Header = () => {
           </MenuWrapper>
         </HeaderWrapper>
         <HeaderWrapper>
-          <div className="flex items-center bg-gray-100 rounded-md overflow-hidden">
+          <SearchBarWrapper>
+            <SearchBar />
             <SearchIcon color="action"></SearchIcon>
-            <SearchBar></SearchBar>
-          </div>
+          </SearchBarWrapper>
           <HeaderLink>Sign In</HeaderLink>
           <Button>Join</Button>
         </HeaderWrapper>

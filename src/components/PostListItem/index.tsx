@@ -1,27 +1,39 @@
 import { PostListContainer, PostListRanking, PostListWrapper } from './styles';
 import '../../App.css';
-import { loadBestSellerListFromA } from '../../api/bestsellers';
+import { getAladinBestsellers } from '../../api/bestsellers';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
+import Skeleton from '@mui/material/Skeleton';
 
 const PostListItem = () => {
-  loadBestSellerListFromA();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const queryClient = useQueryClient();
+  const { data, isLoading } = useQuery({
+    queryKey: ['Abesetseller'],
+    queryFn: getAladinBestsellers,
+  });
+
+  console.log(data.item);
+
   return (
-    <PostListContainer>
-      <PostListWrapper>
-        <img
-          className="post-list-item"
-          src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
-        />
-        <PostListRanking />
-        <img
-          className="post-list-item"
-          src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
-        />
-        <img
-          className="post-list-item"
-          src="https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
-        />
-      </PostListWrapper>
-    </PostListContainer>
+    <div>
+      {isLoading ? (
+        <Skeleton variant="rectangular" width={210} height={118} />
+      ) : (
+        <PostListContainer>
+          <PostListWrapper>
+            {data.item.map((index: number) => (
+              <img
+                key={''}
+                className="post-list-item"
+                src={''}
+                alt={`Item ${index + 1}`}
+              />
+            ))}
+            <PostListRanking />
+          </PostListWrapper>
+        </PostListContainer>
+      )}
+    </div>
   );
 };
 

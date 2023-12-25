@@ -17,6 +17,13 @@ export const SearchBar = styled.input`
   border: none;
   opacity: 0.33;
 ` 
+export const SearchBarWrapper =styled.div`
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color:#d1d5db;
+  border-radius: 0.375rem;
+`
 
 export const Logo = styled.h1`
   font-size: 36px;
@@ -46,3 +53,4 @@ export const MenuWrapper = styled.div`
   }
   margin-left: 1rem;
 `
+
