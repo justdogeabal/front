@@ -12,23 +12,18 @@ const PostListItem = () => {
     queryFn: getAladinBestsellers,
   });
 
-  console.log(data.item);
-
   return (
     <div>
       {isLoading ? (
-        <Skeleton variant="rectangular" width={210} height={118} />
+        <Skeleton variant="rectangular" width={150} height={200} />
       ) : (
         <PostListContainer>
           <PostListWrapper>
-            {data.item.map((index: number) => (
-              <img
-                key={''}
-                className="post-list-item"
-                src={''}
-                alt={`Item ${index + 1}`}
-              />
-            ))}
+            {data.item.map(
+              (item: { itemId: number; cover: string; title: string }) => (
+                <img key={item.itemId} src={item.cover} alt={item.title} />
+              ),
+            )}
             <PostListRanking />
           </PostListWrapper>
         </PostListContainer>
