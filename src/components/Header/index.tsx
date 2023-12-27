@@ -16,7 +16,7 @@ const Header = () => {
     <div>
       <HeaderContainer>
         <HeaderWrapper>
-          <Logo>책리뷰닷컴</Logo>
+          <Logo>책장터</Logo>
           <MenuWrapper>
             <HeaderLink href="#">Home</HeaderLink>
             <HeaderLink>My Books</HeaderLink>

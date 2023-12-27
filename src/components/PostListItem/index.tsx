@@ -1,8 +1,8 @@
 import { PostListContainer, PostListRanking, PostListWrapper } from './styles';
-import '../../App.css';
 import { getAladinBestsellers } from '../../api/bestsellers';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import Skeleton from '@mui/material/Skeleton';
+import '../../App.css';
 
 const PostListItem = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
