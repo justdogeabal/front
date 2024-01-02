@@ -1,1 +1,3 @@
-export const Login = () => <div></div>;
+import { LoginPageContainer } from './styles';
+
+export const Login = () => <LoginPageContainer></LoginPageContainer>;
