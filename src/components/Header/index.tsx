@@ -16,7 +16,7 @@ const Header = () => {
     <div>
       <HeaderContainer>
         <HeaderWrapper>
-          <Logo>책장터</Logo>
+          <Logo>책물교환</Logo>
           <MenuWrapper>
             <HeaderLink href="#">Home</HeaderLink>
             <HeaderLink>My Books</HeaderLink>
@@ -28,7 +28,7 @@ const Header = () => {
             <SearchBar />
             <SearchIcon color="action"></SearchIcon>
           </SearchBarWrapper>
-          <HeaderLink>Sign In</HeaderLink>
+          <HeaderLink href="/login">Sign In</HeaderLink>
           <Button>Join</Button>
         </HeaderWrapper>
       </HeaderContainer>

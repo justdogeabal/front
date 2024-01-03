@@ -11,6 +11,7 @@ const App = () => (
       <Header />
       <HeadingText>베스트셀러</HeadingText>
       <PostListItem />
+      <HeadingText>교환 게시판</HeadingText>
     </QueryClientProvider>
   </>
 );
