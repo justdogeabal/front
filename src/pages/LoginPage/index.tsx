@@ -2,6 +2,7 @@ import {
   EmailContainer,
   EmailInput,
   EmailWrapper,
+  LoginButton,
   LoginPageContainer,
   LoginPageWrapper,
   LoginText,
@@ -27,6 +28,7 @@ export const Login = () => (
           />
         </EmailWrapper>
       </EmailContainer>
+      <LoginButton>로그인</LoginButton>
     </LoginPageWrapper>
   </LoginPageContainer>
 );

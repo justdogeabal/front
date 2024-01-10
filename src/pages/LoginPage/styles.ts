@@ -52,3 +52,12 @@ export const EmailInput = styled.input`
     outline: none;
     padding-left: 10px;
 `
+
+export const LoginButton = styled.button`
+    background-color:#4285F4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 20px;
+    border: 1px solid white;
+`
