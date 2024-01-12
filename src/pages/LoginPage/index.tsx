@@ -28,7 +28,8 @@ export const Login = () => (
           />
         </EmailWrapper>
       </EmailContainer>
-      <LoginButton>로그인</LoginButton>
+      <LoginButton>이메일로 시작하기</LoginButton>
+      아직 책물교환의 회원이 아니신가요? 회원가입
     </LoginPageWrapper>
   </LoginPageContainer>
 );

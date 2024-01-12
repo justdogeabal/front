@@ -5,7 +5,7 @@ const PostPage = () => {
   return (
     <>
       <Page header={<></>} footer={<></>}>
-        <Link to="/">1번</Link>
+        <Link to="/"></Link>
         <button>좋아요</button>
       </Page>
     </>
