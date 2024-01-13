@@ -6,3 +6,13 @@
   object-fit: cover;
   aspect-ratio: 150/200;
 }
+
+.display-flex {
+  display: flex;
+}
+
+.mt-17-ml-4 {
+  margin-top: 17px;
+  padding-left: 4px;
+  text-decoration: none;
+}

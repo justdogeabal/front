@@ -60,4 +60,6 @@ export const LoginButton = styled.button`
     cursor: pointer;
     padding: 8px 20px;
     border: 1px solid white;
+    margin: 0px auto;
+    display: block;
 `

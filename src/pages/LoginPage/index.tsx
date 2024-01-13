@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   EmailContainer,
   EmailInput,
@@ -28,8 +29,14 @@ export const Login = () => (
           />
         </EmailWrapper>
       </EmailContainer>
+      <br />
       <LoginButton>이메일로 시작하기</LoginButton>
-      아직 책물교환의 회원이 아니신가요? 회원가입
+      <div className="display-flex">
+        <SubText>아직 책물교환의 회원이 아니신가요?</SubText>
+        <Link to={'/register'} className="mt-17-ml-4">
+          회원가입
+        </Link>
+      </div>
     </LoginPageWrapper>
   </LoginPageContainer>
 );
