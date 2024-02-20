@@ -23,6 +23,7 @@ export const SearchBarWrapper =styled.div`
   overflow: hidden;
   background-color:#d1d5db;
   border-radius: 0.375rem;
+  margin-right: 2rem;
 `
 
 export const Logo = styled.h1`
@@ -45,6 +46,9 @@ export const HeaderLink =styled.a`
     color: #111827;
     cursor: pointer;
   }
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
 `
 
 export const MenuWrapper = styled.div`

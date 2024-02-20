@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Link } from '@mui/material';
 import {
   HeaderBottomBorder,
   HeaderContainer,
@@ -29,7 +29,9 @@ const Header = () => {
             <SearchIcon color="action"></SearchIcon>
           </SearchBarWrapper>
           <HeaderLink href="/login">Sign In</HeaderLink>
-          <Button>Join</Button>
+          <Link>
+            <Button>Join</Button>
+          </Link>
         </HeaderWrapper>
       </HeaderContainer>
       <HeaderBottomBorder />

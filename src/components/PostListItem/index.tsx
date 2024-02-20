@@ -1,12 +1,10 @@
 import { PostListContainer, PostListRanking, PostListWrapper } from './styles';
 import { getAladinBestsellers } from '../../api/bestsellers';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import Skeleton from '@mui/material/Skeleton';
 import '../../App.css';
 
 const PostListItem = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const queryClient = useQueryClient();
   const { data, isLoading } = useQuery({
     queryKey: ['Abesetseller'],
     queryFn: getAladinBestsellers,
